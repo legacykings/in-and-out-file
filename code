@@ -1,0 +1,27 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+// int main () {
+//   ofstream outFile ("numbers.txt");
+
+//   for(int i = 0; i<=100; i+=10)
+//     outFile << i << endl;
+
+//   outFile.close();
+// }
+
+int main(){
+    ifstream inFile("numbers.txt");
+
+    int number;
+    for(int i = 0; i < 11; i++) {
+        inFile >> number;
+        cout << number << endl;
+    }
+    while (inFile >> number) {
+        cout << number << endl;
+    }
+
+    inFile.close();
+}
